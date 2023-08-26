@@ -8,14 +8,11 @@
       <clover outputFile="build/logs/clover.xml"/>
     </report>
   </coverage>
-  <testsuites>
-    <testsuite name="Unit">
-      <directory>tests/Unit</directory>
-    </testsuite>
+   
     <testsuite name="Feature">
       <directory suffix="Test.php">.</directory>
     </testsuite>
-  </testsuites>
+
   <logging/>
 </phpunit>
 
