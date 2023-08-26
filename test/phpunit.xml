@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit >
-	<coverage>
-		<include>
-			<directory suffix=".php">../../src</directory>
-		</include>
-		<report>
-			<html outputDirectory="./_coverage" lowUpperBound="35" highLowerBound="70"/>
-			<text outputFile="php://stdout" showUncoveredFiles="true"/>
-		</report>
-	</coverage>
+<phpunit bootstrap = "vendor/autoload.php"
+    backupGlobals               = "false"
+    backupStaticAttributes      = "false"
+    colors                      = "true"
+    convertErrorsToExceptions   = "true"
+    convertNoticesToExceptions  = "true"
+    convertWarningsToExceptions = "true"
+    processIsolation            = "false"
+    stopOnFailure               = "false"
+>
 	<testsuites>
 		<testsuite name="main">
 			<directory suffix="Test.php">.</directory>
