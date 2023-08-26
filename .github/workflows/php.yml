@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
+      - name: Update phpunit
+        run: 
+           vendor/bin/phpunit --migrate-configuration
       - name: PHPUnit Tests
         uses: php-actions/phpunit@master
         env:
@@ -18,7 +21,5 @@ jobs:
           bootstrap: vendor/autoload.php
           configuration: test/phpunit.xml
           args: --coverage-text
-      - name: Install composer dependencies
-        run: 
-           vendor/bin/phpunit --migrate-configuration
+
     
