@@ -4,8 +4,7 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
-    run: 
-       vendor/bin/phpunit --migrate-configuration
+
 
     steps:
       - uses: actions/checkout@v3
