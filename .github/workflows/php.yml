@@ -12,7 +12,7 @@ jobs:
       - name: Update phpunit
         run: 
            vendor/bin/phpunit --migrate-configuration
-           apt-get install php7.1-xdebug
+           apt install php-xdebug
       - name: PHPUnit Tests
         uses: php-actions/phpunit@master
         env:
